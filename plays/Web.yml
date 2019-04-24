@@ -1,0 +1,11 @@
+---
+- name: playbook web services
+  hosts: web
+  become: true
+
+  roles:
+    - apache
+    - php
+    - DB
+    - ftp
+    - wordpress

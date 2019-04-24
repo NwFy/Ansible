@@ -1,0 +1,8 @@
+---
+
+- name: install wordpress needed packages
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - python
+    - python-mysqldb
+    - wordpress
